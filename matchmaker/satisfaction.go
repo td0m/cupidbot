@@ -12,7 +12,7 @@ func Satisfaction(users cupidbot.Users, match cupidbot.Match) float64 {
 	if gendersMatchSearch(a.LookingFor, b.Gender) && gendersMatchSearch(b.LookingFor, a.Gender) {
 		total++
 	}
-	return total * 2 / maxSatisfaction
+	return total / maxSatisfaction
 }
 
 func gendersMatchSearch(seeking cupidbot.Gender, got cupidbot.Gender) bool {
