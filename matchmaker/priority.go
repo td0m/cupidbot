@@ -13,12 +13,14 @@ type PriorityMatcher struct {
 	lastSatisfaction map[cupidbot.ID]float64
 }
 
+// NewPriorityMatcher creates a new priority-based match maker
 func NewPriorityMatcher() *PriorityMatcher {
 	return &PriorityMatcher{
 		lastSatisfaction: map[cupidbot.ID]float64{},
 	}
 }
 
+// Match implementation
 func (m *PriorityMatcher) Match(users cupidbot.Users) []cupidbot.Match {
 	matches := []cupidbot.Match{}
 	// most recently dissatisfied users will have priority

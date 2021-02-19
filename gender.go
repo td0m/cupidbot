@@ -3,7 +3,7 @@ package cupidbot
 // Gender enum
 type Gender string
 
-// gender preferences
+// gender enum values
 const (
 	Male      Gender = "male"
 	Female    Gender = "female"

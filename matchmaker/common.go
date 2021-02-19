@@ -2,6 +2,8 @@ package matchmaker
 
 import "github.com/td0m/cupidbot"
 
+// All creates all match makers
+// this is used in benchmarks and unit testing to test all match maker implementations
 func All() []cupidbot.MatchMaker {
 	return []cupidbot.MatchMaker{
 		NewSimpleMatcher(),
